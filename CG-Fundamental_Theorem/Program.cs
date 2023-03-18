@@ -5,6 +5,8 @@ using System.IO;
 using System.Xml;
 using BigGustave;
 using Microsoft.VisualBasic;
+using static System.Net.Mime.MediaTypeNames;
+
 namespace ConsoleApp1 {
     class Program {
         public XmlDocument constants = new XmlDocument();
@@ -13,7 +15,12 @@ namespace ConsoleApp1 {
             PathsAndConstants constants = new PathsAndConstants();
             Png backGround = openFunc(constants.bgPath);
             Png imgToReshape = openFunc(constants.imgToReshapePath);
-           
+            Png test = openFunc(constants.testPath);
+
+            Pixel topLeft = test.GetPixel(0, 0);
+            Console.WriteLine(topLeft.R + ", " + topLeft.G + "," + topLeft.B);
+
+
         }
         void loadConstants() {
             constants.PreserveWhitespace = true;
