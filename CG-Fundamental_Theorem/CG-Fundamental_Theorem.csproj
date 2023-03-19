@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="BigGustave" Version="1.0.6" />
+    <PackageReference Include="MathNet.Numerics" Version="5.0.0" />
   </ItemGroup>
 
 </Project>
